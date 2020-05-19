@@ -1,0 +1,21 @@
+#!/bin/bash
+
+main() {
+  local BASE="https://exporter.nih.gov"
+  local DATA="./data/nih"
+  local csvs
+  csvs=()
+  while IFS='' read -r line; do csvs+=("$line"); done < <(cat ./utils/reporter_files.txt)
+  # source libraries
+  for i in "${csvs[@]}"; do
+    # echo "${i}"
+    echo "${i##*/}"
+    local output="${DATA}/${i##*/}"
+    curl "${BASE}${i}" -o "${output}"
+    unzip "${output}" -d "${DATA}/"
+    rm "${output}"
+    sleep 1
+  done
+}
+
+main "$@"
