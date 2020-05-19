@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# Simple script to fetch all of the files referenced in ./utils/reporter_files.txt
+# and unzip them to ./data/exporter directory
+
 main() {
   local BASE="https://exporter.nih.gov"
-  local DATA="./data/nih"
+  local DATA="./data/exporter"
   local csvs
   csvs=()
   while IFS='' read -r line; do csvs+=("$line"); done < <(cat ./utils/reporter_files.txt)
