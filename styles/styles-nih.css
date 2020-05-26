@@ -1,0 +1,44 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 19% 19% 30%;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.wrapper > div {
+  color: white;
+  background-color: #1b1b2f;
+  padding: 1em 2em 2em 2em    
+}
+.wrapper > .plain {
+  background-color: white;
+  padding: 0;
+}
+.wrapper > .blue {
+  background-color: #162447;
+}
+.wrapper > div > h1, .wrapper > div > h2, .wrapper .boldit {
+  color: #e43f5a;
+  font-weight: bold;
+}
+h1 {
+  color: #162447;  
+}
+.box1 { 
+  grid-column-start: 1; 
+  grid-column-end: 4; 
+  grid-row-start: 2; 
+  grid-row-end: 2; 
+}
+.box2 { 
+  grid-column-start: 2; 
+  grid-column-end: 5; 
+  grid-row-start: 3; 
+  grid-row-end: 3; 
+}
+.box2 img {
+    vertical-align: bottom;
+}
+.light, h3.light, h4.light {
+    font-weight: lighter;
+    color: white
+}
