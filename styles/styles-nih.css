@@ -7,7 +7,7 @@
 .wrapper > div {
   color: white;
   background-color: #1b1b2f;
-  padding: 1em 2em 2em 2em    
+  padding: 1em 2em 2em 2em;
 }
 .wrapper > .plain {
   background-color: white;
@@ -16,29 +16,48 @@
 .wrapper > .blue {
   background-color: #162447;
 }
-.wrapper > div > h1, .wrapper > div > h2, .wrapper .boldit {
+.wrapper > div > h1,
+.wrapper > div > h2,
+.wrapper .boldit {
   color: #e43f5a;
   font-weight: bold;
 }
 h1 {
-  color: #162447;  
+  color: #162447;
 }
-.box1 { 
-  grid-column-start: 1; 
-  grid-column-end: 4; 
-  grid-row-start: 2; 
-  grid-row-end: 2; 
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
-.box2 { 
-  grid-column-start: 2; 
-  grid-column-end: 5; 
-  grid-row-start: 3; 
-  grid-row-end: 3; 
+.box2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 .box2 img {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
-.light, h3.light, h4.light {
-    font-weight: lighter;
-    color: white
+.light,
+h3.light,
+h4.light {
+  font-weight: lighter;
+  color: white;
+}
+:not(.jp-RenderedMarkdown).jp-RenderedHTMLCommon td {
+  text-align: left;
+}
+.jp-OutputArea-output pre {
+  word-break: normal;
+}
+table.identifiers {
+  width: 60%;
+}
+table.identifiers tbody tr td {
+  font-size: 1.2em;
+}
+td.yes {
+  border: 2px solid #74d4c0;
 }
