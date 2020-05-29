@@ -1,13 +1,14 @@
 # NIH Awards Analysis
 
-
 This project aims to analyze and provide some summary statistics for [NIH grant award data from ExPORTER data files](https://exporter.nih.gov/about.aspx).
+
+### For fiscal years 2019 and 2020, the NIH has funded:
 
 <img src="https://user-images.githubusercontent.com/548922/82957080-33afa200-9f80-11ea-94a8-09586fdb9c43.png" alt="Summary statistics for NIH grant award data" style="text-align:center"/>
 
 <img src="https://user-images.githubusercontent.com/548922/83055742-4084d200-a022-11ea-9b92-214e5f4091b7.png" alt="Rolling median for select NIH administering agencies" style="text-align:center"/>
 
-## Preprocessing the data with Preprocessing.ipynb
+# Preprocessing the data with Preprocessing.ipynb
 
 ### The notebook and relevant directories
 
@@ -72,7 +73,3 @@ Since all US award data have related zip codes for the organization, we added ad
 
 9 directories, 19 files
 ```
-
-
-
-- 
