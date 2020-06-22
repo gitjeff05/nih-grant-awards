@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 30% 19% 19% 30%;
+  grid-template-columns: 20% 30% 19% 29%;
   column-gap: 10px;
   row-gap: 10px;
 }
@@ -21,6 +21,64 @@
 .wrapper .boldit {
   color: #e43f5a;
   font-weight: bold;
+}
+.calculation {
+  display: grid;
+  grid-template-columns: 10% 22% auto;
+  grid-template-rows: 20% 20% 3px auto;
+  row-gap: 2px;
+  align-content: end;
+}
+p {
+  line-height: 1.3em;
+}
+.top-const {
+  grid-column: 2 / span 2;
+}
+.operator {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: end;
+  justify-self: center;
+  font-size: x-large;
+  color: cornsilk;
+}
+.const {
+  color: #f8f3eb;
+  line-height: 1.1em;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.bottom-const {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-self: center;
+  line-height:0.7em;
+}
+.line {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: cornsilk;
+}
+.equal {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column: 2 / span 2;
+  color: #e43f5a;
+}
+.red {
+  color: #e43f5a;
+}
+.bold {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.smaller {
+  font-size: 0.7rem;
 }
 h1 {
   color: #162447;

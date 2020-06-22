@@ -4,9 +4,9 @@ This project aims to analyze and provide some summary statistics for [NIH grant 
 
 ### For fiscal years 2019 and 2020, the NIH has funded:
 
-<img src="https://user-images.githubusercontent.com/548922/82957080-33afa200-9f80-11ea-94a8-09586fdb9c43.png" alt="Summary statistics for NIH grant award data" style="text-align:center"/>
+<img src="https://user-images.githubusercontent.com/548922/85337721-f5d66880-b4ae-11ea-80ed-c204947de808.png" alt="Summary statistics for NIH grant award data" style="text-align:center"/>
 
-<img src="https://user-images.githubusercontent.com/548922/83055742-4084d200-a022-11ea-9b92-214e5f4091b7.png" alt="Rolling median for select NIH administering agencies" style="text-align:center"/>
+<img src="https://user-images.githubusercontent.com/548922/85338207-d429b100-b4af-11ea-8f0e-08c227867227.png" alt="Rolling median for select NIH administering agencies" style="text-align:center"/>
 
 # Preprocessing the data with Preprocessing.ipynb
 
@@ -45,31 +45,27 @@ Since all US award data have related zip codes for the organization, we added ad
 
 ```bash
 .
-├── Analysis.ipynb # Analysis
-├── LICENSE
-├── Preprocess.ipynb
-├── README.md
+├── Analysis.ipynb                                               # this notebook
+├── Preprocess.ipynb                                             # preprocessing notebook
+├── CHANGELOG.md                                                 # When data or models are generated, a corresponding entry goes here
+├── README.md                                                    # Project details
 ├── data
-│   ├── geo
-│   │   ├── cb_2019_us_state_500k.cpg
-│   │   ├── cb_2019_us_state_500k.dbf
-│   │   ├── cb_2019_us_state_500k.prj
-│   │   ├── cb_2019_us_state_500k.shp
-│   │   ├── cb_2019_us_state_500k.shp.ea.iso.xml
-│   │   ├── cb_2019_us_state_500k.shp.iso.xml
-│   │   └── cb_2019_us_state_500k.shx
-│   └── zips
-│       └── us-zip-code-latitude-and-longitude.csv
+│   ├── exporter                                                 # exporter files (not included in repo) 
+│   ├── geo                                                      # shapefiles for maps
+│   │   └── cb_2019_us_state_500k.{cpg,dbf,prj,shp,shx,xml}
+│   └── zips                                                     # Zip to lat/long
+│       └── us-zip-code-latitude-and-longitude.csv 
 ├── out
-│   ├── csv
-│   │   └── post_processed_2020-05-14T15:17:56+00:00.csv.gzip
-│   ├── json
-│   └── models
-├── styles
-│   └── styles-nih.css
+│   ├── csv                                                      # output of preprocessing
+│   │   └── post_processed_2020-05-29T12:36:20+00:00.csv.gzip    # sample (Note: this is not the entire dataset, see utils/get_csvs for script to get all files for yourself)
+│   ├── json                                                     # any json output goes here
+│   └── models                                                   # any saved models go here
+├── styles                                                       
+│   └── styles-nih.css                                           # external styles
 └── utils
-    ├── get_csvs
-    └── reporter_files.txt
+    ├── get_csvs                                                 # function to get data
+    ├── reporter_files.txt                                       # list of reporter files to retrieve
+    └── style_dataframes.py                                      # Helper methods to style dataframes  
 
 9 directories, 19 files
 ```
